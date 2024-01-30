@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dashboard</title>
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://cdn.quilljs.com/1.3.6/quill.snow.css">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+   <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+            <div class="container-fluid">
+               <a href="#" class="navbar-brand">
+               <img src="images/logo.svg" alt="Vuez">
+               </a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div id="navbarCollapse" class="collapse navbar-collapse">
+                  <div class="main-menu">
+                     <a href="#">
+                     <img src="images/calendar.svg" alt="Vuez">
+                     Events
+                     </a>
+                     <a href="#">
+                     <img src="images/icon-profile.svg" alt="Vuez">
+                     Attendee Profile
+                     </a>
+                  </div>
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item">
+                        <a href="" class="nav-link">
+                        <img src="images/settings.svg" alt="Vuez">
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="" class="nav-link">
+                        <img src="images/notification.svg" alt="Vuez">
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="" class="nav-link">
+                        <img src="images/img-profile.png" alt="Vuez">
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            </nav>
+   </header>
+   <section>
+      <div class="top-tab">
+         <div class="container-fluid">
+            <div class="top-tab-col">
+               <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item">
+                     <a class="nav-link active btn-common" data-toggle="tab" href="#manage" role="tab">
+                        Manage</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="btn-main btn-common" class="nav-link" data-toggle="tab" href="#conduct"
+                        role="tab">Conduct</a>
+                  </li>
+               </ul>
+               <div class="dropdown">
+                  <button class="btn btn-main dropdown-toggle" type="button" data-toggle="dropdown">
+                     Edit
+                  </button>
+                  <div class="dropdown-menu">
+                     <a class="dropdown-item" href="#">Edit 01</a>
+                     <a class="dropdown-item" href="#">Edit 02</a>
+                     <a class="dropdown-item" href="#">Edit 03</a>
+                  </div>
+               </div>
+            </div>
+            <div class="top-calender">
+               <img src="images/calendar-2.svg" alt="vuez">
+               <p>Wed Aug 23, 2023 - 08:00 AM (IST)</p>
+            </div>
+         </div>
+         <div class="main-tabs">
+            <div class="container-fluid">
+               <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item">
+                     <a class="nav-link active" data-toggle="tab" href="#Overview" role="tab">
+                        Overview
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link " data-toggle="tab" href="#team" role="tab">
+                        Team
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link " data-toggle="tab" href="#session" role="tab">
+                        Session
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link " data-toggle="tab" href="#from-responses" role="tab">
+                        From Responses
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a data-toggle="modal" data-target="#TicketModalCenter">
+                        Ticket
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" data-toggle="tab" href="#settings" role="tab">
+                        Settings
+                     </a>
+                  </li>
+               </ul>
+               <div class="preview-col">
+                  <a href="#">
+                     <img src="images/desktop.svg" alt="Vuez">
+                     Preview
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="tabs-inner">
+         <div class="tab-content">
+            <div class="tab-pane active" id="Overview" role="tabpanel">
+               <div class="container-fluid  tabs-white">
+                  <div class="row">
+                     <div class="col-lg-8 col-md-8 col-sm-12">
+                        <ul class="nav nav-tabs" role="tablist">
+                           <li class="nav-item">
+                              <a class="nav-link " data-toggle="tab" href="#new" role="tab">New</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link " data-toggle="tab" href="#Booked" role="tab">Booked</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link active" data-toggle="tab" href="#Announced" role="tab">Announced</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" data-toggle="tab" href="#Ended" role="tab">Ended</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" data-toggle="tab" href="#Cancelled" role="tab">Cancelled</a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="d-flex justify-content-between h-100 nav-right">
+                           <ul class="left-layout">
+                              <li>
+                                 <a href="#">Send message</a>
+                              </li>
+                              <li>
+                                 <a href="#">Log note</a>
+                              </li>
+                              <li>
+                                 <a href="#"><img src="images/icon-activity.svg" alt="vuez"> Activities</a>
+                              </li>
+                           </ul>
+                           <div class="follow-col">
+                              <p>Following <img src="images/icon-users.svg" alt="vuez"> <span>3</span></p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-lg-8 col-md-8 col-sm-12">
+                        <div class="tab-content">
+                           <div class="tab-pane" id="new" role="tabpanel">
+                              New
+                           </div>
+                           <div class="tab-pane " id="Booked" role="tabpanel">
+                              Booked
+                           </div>
+
+                           <div class="tab-pane active" id="Announced" role="tabpanel">
+                              <div class="overview-sec">
+                                 <div class="anounced-grid">
+                                    <div class="progress-col">
+                                       <div class="progress-contents">
+                                          <div class="box">
+                                             <div class="chart-1 chart" data-percent="63">
+                                                <p class="perc-text">63%</p>
+                                             </div>
+                                          </div>
+                                          <div class="box-text">
+                                             <h3>Progress Tracker</h3>
+                                             <p>For a great microsite, you'll need to add a bit
+                                                more information.
+                                             </p>
+                                          </div>
+                                          <div class="btm-btn">
+                                             <a href="#">View Details</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="progress-col">
+                                       <div class="progress-contents">
+                                          <h3>EVENT LIVE URL</h3>
+                                          <a class="box-link"
+                                             href="#">https://gadrgdra.zohobackstage.com/EnglishClass</a>
+                                          <p>Your event is live. You may still make changes
+                                             and republish your event.
+                                          </p>
+                                          <div class="btm-btn">
+                                             <a href="#">Edit</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="progress-col">
+                                       <div class="progress-contents">
+                                          <div class="box">
+                                             <div class="chart-2 chart" data-percent="70">
+                                                <p class="perc-text">70%</p>
+                                             </div>
+                                          </div>
+                                          <div class="box-text">
+                                             <h3>Tickets (100)</h3>
+                                             <div class="total-seats">
+                                                <div class="seats sold-seats">
+                                                   <div class="dot sold"></div>
+                                                   <p>Sold seats (30)</p>
+                                                </div>
+                                                <div class="seats avai-seats">
+                                                   <div class="dot avai"></div>
+                                                   <p>Sold seats (30)</p>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="btm-btn">
+                                             <a href="#">View Tickets</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="progress-col">
+                                       <div class="progress-contents">
+                                          <div class="box-text">
+                                             <h3>Sessions</h3>
+                                             <div class="counter-col">
+                                                <div class="counter-single">
+                                                   <p class="count-num">03</p>
+                                                   <p>Live Session</p>
+                                                </div>
+                                                <div class="counter-single">
+                                                   <p class="count-num">09</p>
+                                                   <p>Total sessions</p>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="btm-btn">
+                                             <a href="#">View Sessions</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="progress-col">
+                                       <div class="progress-contents">
+                                          <div class="box-text">
+                                             <h3>Event members</h3>
+                                             <div class="counter-col">
+                                                <div class="counter-single">
+                                                   <p class="count-num">10</p>
+                                                   <p>Staff</p>
+                                                </div>
+                                                <div class="counter-single">
+                                                   <p class="count-num">09</p>
+                                                   <p>Organizers</p>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="btm-btn">
+                                             <a href="#">View Members</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="progress-col">
+                                       <div class="progress-contents">
+                                          <div class="box-text">
+                                             <h3>Exhibitors</h3>
+                                             <div class="counter-col">
+                                                <div class="counter-single">
+                                                   <p class="count-num">0</p>
+                                                   <p>Total requests</p>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="btm-btn">
+                                             <a href="#">Monitor Deals</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+
+                           <div class="tab-pane" id="Ended" role="tabpanel">
+                              Ended
+                           </div>
+                           <div class="tab-pane " id="Cancelled" role="tabpanel">
+                              Cancelled
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-lg-4 col-md-4 col-sm-12">
+                        <div class="right-content-col">
+                           <div class="form-group">
+                              <textarea placeholder="Send message to followers "></textarea>
+                              <br>
+                              <a href="#" class="btn-main mt-2">Send</a>
+                           </div>
+                           <div class="activity-col mt-1">
+                              <p class="current-day">Today</p>
+                              <div class="activity d-flex align-items-center">
+                                 <div class="pro-img">
+                                    <img src="images/img-profile.png" alt="Vuez">
+                                 </div>
+                                 <div class="pro-details">
+                                    <div class="d-flex align-items-center">
+                                       <p class="pro-name">Mitchell Admin</p>
+                                       <p class="last-seen"> - 5 Hours ago</p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                       <div class="dot"></div>
+                                       <p>Booked &rarr; <span class="anounce">Announced</span> <span
+                                             class="stage">(Stage)</span></p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="activity d-flex align-items-center">
+                                 <div class="pro-img">
+                                    <img src="images/img-profile.png" alt="Vuez">
+                                 </div>
+                                 <div class="pro-details">
+                                    <div class="d-flex align-items-center">
+                                       <p class="pro-name">Mitchell Admin</p>
+                                       <p class="last-seen"> - 5 Hours ago</p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                       <div class="dot"></div>
+                                       <p>New &rarr; <span class="anounce">Booked</span> <span
+                                             class="stage">(Stage)</span></p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="activity d-flex align-items-center">
+                                 <div class="pro-img">
+                                    <img src="images/img-profile.png" alt="Vuez">
+                                 </div>
+                                 <div class="pro-details">
+                                    <div class="d-flex align-items-center">
+                                       <p class="pro-name">Mitchell Admin</p>
+                                       <p class="last-seen"> - 5 Hours ago</p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                       <div class="dot"></div>
+                                       <p>Booked &rarr; <span class="anounce">New</span> <span
+                                             class="stage">(Stage)</span></p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="activity d-flex align-items-center">
+                                 <div class="pro-img">
+                                    <img src="images/img-profile.png" alt="Vuez">
+                                 </div>
+                                 <div class="pro-details">
+                                    <div class="d-flex align-items-center">
+                                       <p class="pro-name">Mitchell Admin</p>
+                                       <p class="last-seen"> - 5 Hours ago</p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                       <p>Event Created</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+            <div class="tab-pane container-fluid" id="team" role="tabpanel">
+               Team
+            </div>
+            <div class="tab-pane container-fluid" id="session" role="tabpanel">
+               session
+            </div>
+            <div class="tab-pane container-fluid" id="from-responses" role="tabpanel">
+               From Response
+            </div>
+            <div class="tab-pane container-fluid" id="ticket" role="tabpanel">
+               Ticket
+            </div>
+            <div class="tab-pane container-fluid" id="settings" role="tabpanel">
+               Settings
+            </div>
+         </div>
+      </div>
+
+      <!-- Ticket Modal  -->
+      <div class="modal fade ticket-modal" id="TicketModalCenter" tabindex="-1" role="dialog"
+         aria-labelledby="TicketModalCenterTitle" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title d-flex align-items-center" id="TicketModalLongTitle">
+                     <img src="images/ticket.svg" alt="vuez">Add ticket class
+                  </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <img src="images/icon-close.svg" alt="Vuez">
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <form>
+                     <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                           <div class="form-group">
+                              <label>Ticket Name<span>*</span> </label>
+                              <input type="text" class="form-control" placeholder="Gold">
+                           </div>
+                           <div class="form-group">
+                              <label>Status </label>
+                              <div class="input-append-2">
+                                 <select class="custom-select form-control" id="gender3">
+                                    <option selected disabled>Status</option>
+                                    <option value="1">Active</option>
+                                    <option value="2">In-active</option>
+                                 </select>
+                                 <div class="append-icon">
+                                    <img src="images/icon-arrow.svg" alt="vuez">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label>Quantity </label>
+                              <input type="text" class="form-control">
+                           </div>
+                           <div class="price-group form-group ">
+                              <label>Price </label>
+                              <div class="d-flex align-items-center form-radio">
+                                 <div class="form-radio d-flex align-items-center">
+                                    <input type="radio" id="nil">
+                                    <label for="nil"></label>
+                                 </div>
+                                 <div class="form-group m-0 input-append">
+                                    <input type="text" class="form-control">
+                                    <div class="append">
+                                       <img src="images/icon-dollar.svg" alt="Vuez">
+                                    </div>
+                                 </div>
+                                 <div class=" form-radio d-flex align-items-center">
+                                    <input type="radio" id="free" checked>
+                                    <label for="free">Free</label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-lg-6 col-md-12 col-sm-12">
+                                 <div class="form-group">
+                                    <label>Minimum Buying Limit </label>
+                                    <input type="text" class="form-control">
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 col-md-12 col-sm-12">
+                                 <div class="form-group">
+                                    <label>Maximum Buying Limit </label>
+                                    <input type="text" class="form-control">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                           <div class="row">
+                              <div class="col-lg-6 col-md-6 col-sm-12">
+                                 <div class="form-group ">
+                                    <label for="inputDate">Sales Starts Date</label>
+                                    <div class="input-append-2">
+                                       <input type="input" class="form-control" id="inputDate" value="Sep 01, 2023">
+                                       <div class="append-icon">
+                                          <img src="images/calendar-3.svg" alt="vuez">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6 col-sm-12">
+                                 <div class="form-group ">
+                                    <label for="inputDate">Time</label>
+                                    <div class="input-append-2">
+                                       <input class="form-control" type="time" value="8:00 AM" />
+                                       <div class="append-icon">
+                                          <img src="images/clock.svg" alt="vuez">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-sm-12">
+                                 <div class="form-group form-radio">
+                                    <input type="radio" id="Now">
+                                    <label for="Now">Now</label>
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6 col-sm-12">
+                                 <div class="form-group">
+                                    <label for="inputDate">Sales End Date</label>
+                                    <div class=" input-append-2">
+                                       <input type="input" class="form-control" id="inputDate-2" value="Sep 01, 2023">
+                                       <div class="append-icon">
+                                          <img src="images/calendar-3.svg" alt="vuez">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6 col-sm-12">
+                                 <div class="form-group ">
+                                    <label for="inputDate">Time</label>
+                                    <div class="input-append-2">
+                                       <input class="form-control" type="time" value="8:00 AM" />
+                                       <div class="append-icon">
+                                          <img src="images/clock.svg" alt="vuez">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-sm-12">
+                                 <div class="form-group form-radio">
+                                    <input type="radio" id="end">
+                                    <label for="end">Event End Date </label>
+                                 </div>
+                              </div>
+                              <div class="col-sm-12">
+                                 <div class="form-group ">
+                                    <label>Ticket Description</label>
+                                    <div class="text-editor">
+                                       <input name="box" type="hidden">
+                                       <div id="editor-container"></div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                  </form>
+               </div>
+               <div class="modal-footer justify-content-start p-0 ">
+                  <a class="btn-main">Done</a>
+                  <a class="btn-common" data-dismiss="modal">Close</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- End Ticket Modal  -->
+
+   </section>
+   <!-- jQuery library -->
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+   <!-- Popper JS -->
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+   <!-- Latest compiled JavaScript -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.js"></script>
+   <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
+   <script src="script/script.js"></script>
+</body>
+
+</html>
